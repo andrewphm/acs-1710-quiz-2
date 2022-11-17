@@ -21,8 +21,7 @@ def homepage():
             key_str = str(i).replace("_", " ")
             result[key_str] = result.pop(i)
 
-        context = {"result": result}
-        return render_template("home.html", **context)
+        return render_template("home.html", result = result)
     else:
         return render_template("home.html")    
 
